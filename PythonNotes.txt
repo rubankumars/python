@@ -853,3 +853,86 @@ for i,char in enumerate(list(range(100))):
 
 While Loops
 -----------
+i = 0
+while i < 50:
+  print(i)
+  i += 1
+  break  # if we add break, the program wont execute else part
+else:  # it'll get executed if the conditions turns false
+  print('done with all the work')
+
+# Use for loop for simple iterables
+my_list = [1,2,3]
+for item in [1,2,3]:
+  print(item)
+
+# Use while loop for the iterables which are not known in advance
+i = 0
+while i < len(my_list):
+  print(my_list[i])
+  i += 1
+  
+while True:
+  input('say something: ')
+break
+
+while True:
+  response = input('say something: ')
+  if (response == 'bye'):
+    break
+
+
+Break, Continue, Pass
+---------------------
+number = 0
+
+for number in range(10):
+    if number == 5:
+        break    # break here
+
+    print('Number is ' + str(number))
+
+print('Out of loop')
+
+
+number = 0
+
+###
+for number in range(10):
+    if number == 5:
+        continue    # continue here
+
+    print('Number is ' + str(number))
+
+print('Out of loop')
+
+
+number = 0
+
+###
+for number in range(10):
+    if number == 5:
+        pass    # pass here
+
+    print('Number is ' + str(number))
+
+print('Out of loop')
+
+#Exercise!
+#Display the image below to the right hand side where the 0 is going to be ' ', and the 1 is going to be '*'. This will reveal an image!
+picture = [
+  [0,0,0,1,0,0,0],
+  [0,0,1,1,1,0,0],
+  [0,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0]
+]
+
+for image in picture:
+  for pixel in image:
+    if (pixel):
+      print('*', end ="")
+    else:
+      print(' ', end ="")
+  print('') 
