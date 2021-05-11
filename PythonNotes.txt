@@ -1,0 +1,855 @@
+What is a programming language ?
+It is a set of instructions for computer to know what needs to do
+
+Interpreters
+------------
+https://replit.com/ or https://replit.it
+https://glot.io
+
+Basics
+------
+print('Ruban')
+input('What is your name?')
+
+name = input('What is your name?')
+print(name)
+
+print('heellllooo' + name)
+
+Versions of Python
+------------------
+https://www.python.org/doc/versions/
+
+What's new in Python 3.8
+------------------------
+walrus operator
+
+Python 2 vs Python 3
+--------------------
+Story of Python - https://www.youtube.com/watch?v=J0Aq44Pze-w
+Differences - https://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
+Another Ex: https://www.geeksforgeeks.org/important-differences-between-python-2-x-and-python-3-x-with-examples/
+
+1991 - Created by Vido
+2008 - Want a change and created Python 3
+
+Usually updates dont break the applications but Python3 introduced breaking changes
+Ex: print statement
+
+Most company did not upgrade their versions due to this. 
+
+From, 2020 the community stopped security fixes for Python2
+
+Why so many programming languages ?
+-----------------------------------
+
+Fundamental Data Types
+----------------------
+int
+float
+bool
+str
+list
+tuple
+set
+dict
+
+Classes --> custom types
+Ex:SuperCar
+
+Specialized Data Types
+----------------------
+Modules/packages/extensions
+
+None
+----
+
+
+
+Numbers/Integers
+----------------
+print(2 + 4)
+print(2 - 4)
+print(2 * 4)
+print(2 / 4)		# floating point division
+
+print(type(2 + 4))
+
+print(type(9.1+1.1)) # results float
+
+print(2 ** 3) # 2 power 3
+print(5 / 2)  # 2.5
+print(2 // 3) # returns 2 -- > floor division or integer division
+print(5 % 4)  # returns the reminder of the division which is 1 -> modulo
+
+
+# Math functions
+----------------
+print(round(3.1))
+print(abs(-20))
+
+google search python3 match functions
+
+
+Developer Fundamentals
+----------------------
+https://docs.python.org/3/reference/
+https://docs.python.org/3/library/index.html
+
+
+Operator Precedence
+-------------------
+()
+**
+* /
++ -
+
+In the United States, the acronym PEMDAS is common.[11] It stands for Parentheses, Exponents, Multiplication/Division, Addition/Subtraction.
+
+Canada and New Zealand use BEDMAS, standing for Brackets, Exponents, Division/Multiplication, Addition/Subtraction.
+
+Most common in the UK, Pakistan, India, Bangladesh and Australia[13] and some other English-speaking countries is BODMAS meaning either Brackets, Order, Division/Multiplication, Addition/Subtraction or Brackets, Of/Division/Multiplication, Addition/Subtraction.
+
+
+Optional concepts: bin() & complex
+----------------------------------
+print(bin(5))
+complex
+print(int('0b101',2))
+
+Variables
+---------
+snake_case
+start with lower or underscore
+letters, numbers, underscores
+but cant have numbers as starting
+case sensitive
+dont overwrite keywords
+
+constants in uppercase
+
+PI = 3.14
+dont use __ for variables
+
+not best practice --> a,b,c = 1,2,3
+print(a)
+print(b)
+print(c)
+
+Expressions Vs Statements
+
+iq = 100  # statement
+user_age = iq / 5 (left hand side variable, right hand side expression and whole thing is a statement)
+
+
+Augmented assignment operator
+-----------------------------
+some_value = 5
+some_value = some_value + 2
+print(some_value)
+
+right way --> some_value += 2 or some_value -= 2
+
+
+Strings
+-------
+print(type("hi hello there 24!"))
+username = 'supercoder'
+password = 'supersecret'
+
+long_string = '''
+WOW
+0 0
+---
+'''
+
+print(long_string)
+
+first_name = 'ruban'
+last_name = 'kumar'
+
+full_name = first_name + last_name
+
+print(full_name)
+
+full_name = first_name + ' ' + last_name # string concatenation
+
+print('hello' + 5) # wrong
+
+Type Conversion
+---------------
+print(type(int(str(100))))
+
+a = str(100)
+b = int(a)
+c = type(b)
+
+print(c)
+
+Escape Sequence
+---------------
+weather = '\t It\'s \"kind of\" sunny \n hope you have a good day!'
+
+Formatted Strings
+-----------------
+
+name = 'Johnny'
+age = 55
+print('hi ' + name + '. You are ' + str(age) + ' years old')
+
+print(f'hi {name}.  You are {age} years old') # python 3
+
+print('hi {}.  You are {} years old'.format('Johnny', '55')) # python 2 & 3
+
+print('hi {}.  You are {} years old'.format(name, age)) # python 2 & 3
+
+print('hi {1}.  You are {0} years old'.format(name, age)) # python 2 & 3
+
+print('hi {new_name}.  You are {age} years old'.format(new_name='sally', age=100)) # python 2 & 3
+
+
+String Indexes
+--------------
+
+selfish = 'me me me'
+
+print(selfish[0])
+
+print(selfish[0:8])
+
+# [start:stop:stepover]
+print(selfish[0:8:2])
+
+print(selfish[1:])
+print(selfish[:5])
+print(selfish[::1])
+print(selfish[-1])
+print(selfish[::-1])
+
+
+Immutability
+------------
+selfish = '01234567'
+
+selfish[0] = 8 # doesn't work
+
+selfish = '8' # replace
+
+selfish = selfish + '8'
+
+print(selfish)
+
+
+Build-In Functions + Methods
+----------------------------
+str()
+int()
+print()
+print(len('heellllo'))
+greet = 'hellloooo'
+print(greet[:])
+print(greet[0:len(greet)])
+
+quote = 'to be or not to be'
+print(quote.upper())
+print(quote.capitalize())
+print(quote.lower())
+print(quote.find('be'))
+print(quote.replace('be', 'me'))
+
+quote2 = quote.replace('be', 'me')
+
+print(quote2)
+
+Boolean
+-------
+print(bool(1))
+print(bool(0))
+print(bool('True'))
+
+Type Conversion
+---------------
+birth_year = input("what year were you born ?")
+age = 2019 - int(birth_year)
+#age = 2019 - float(birth_year)
+#age = 2019 - bool(birth_year)
+
+print(f'your age is: {age}')
+
+
+Comments
+--------
+https://realpython.com/python-comments-guide/
+
+
+Exercise: password checker
+--------------------------
+username = input('what is your username?')
+password = input('What is your password?')
+
+password_length = len(password)
+hidden_password = '*' * password_length
+
+print(f'{username}, your password, {hidden_password}, is {password_length} letters long')
+
+Lists
+-----
+li = [1,2,3,4,5]
+li2 = ['a', 'b', 'c']
+li3 = [1,2,'a', True]
+# Data Structure
+
+amazon_cart = ['notebooks', 'sunglasses', 'toys', 'grapes']
+print(amazon_cart[2])
+
+# list slicing, performs same like string slicing but lists are mutable
+
+amazon_cart[0] = 'laptop'
+print(amazon_cart[0:3])
+print(amazon_cart)
+
+
+# Both lists modifies if you do not do slicing as both points to same memory block
+amazon_cart = ['notebooks', 'sunglasses', 'toys', 'grapes']
+amazon_cart[0] = 'laptop'
+new_cart = amazon_cart
+new_cart[0] = 'gum'
+print(new_cart)
+print(amazon_cart)
+
+# Copy lists to another list variable if you do slicing
+amazon_cart = ['notebooks', 'sunglasses', 'toys', 'grapes']
+amazon_cart[0] = 'laptop'
+new_cart = amazon_cart[:]  or new_cart = amazon_cart[0:3] 
+new_cart[0] = 'gum'
+print(new_cart)
+print(amazon_cart)
+
+Matrix (used in machine learning or image processing)
+------
+matrix = [
+  [1,2,3],
+  [2,4,6],
+  [7,8,9]
+]
+
+ex: for sample image (say the word X)
+say, # 0 are grey and 1 are green 
+matrix = [
+  [1,0,1],
+  [0,1,0],
+  [1,0,1]
+]
+
+print(matrix[0][1])
+
+
+List Method
+-----------
+basket = [1,2,3,4,5]
+print(len(basket))
+
+check list methods in google
+
+# add
+new_list = basket.append(100)
+print(new_list)  #results to None
+
+print(basket)
+
+###
+basket = [1,2,3,4,5]
+
+basket.append(100)
+new_list = basket
+print(new_list)
+
+###
+basket = [1,2,3,4,5]
+
+basket.insert(4, 100)
+new_list = basket
+print(new_list)
+print(basket)
+
+###
+basket = [1,2,3,4,5]
+
+basket.extend([100])
+new_list = basket
+print(new_list)
+print(basket)
+
+append adds its argument as a single element to the end of a list. The length of the list itself will increase by one.
+extend iterates over its argument adding each element to the list, extending the list. The length of the list will increase by however many elements were in the iterable argument.
+
+>> my_list
+['foo', 'bar']
+>>> my_list.append('baz')
+>>> my_list
+['foo', 'bar', 'baz']
+
+>>> another_list = [1, 2, 3]
+>>> my_list.append(another_list)
+>>> my_list
+['foo', 'bar', 'baz', [1, 2, 3]]
+
+>>> my_list
+['foo', 'bar']
+>>> another_list = [1, 2, 3]
+>>> my_list.extend(another_list)
+>>> my_list
+['foo', 'bar', 1, 2, 3]
+
+Keep in mind that a string is an iterable, so if you extend a list with a string, you'll append each character as you iterate over the string (which may not be what you want):
+
+>>> my_list.extend('baz')
+>>> my_list
+['foo', 'bar', 1, 2, 3, 'b', 'a', 'z']
+
+
+# removing
+basket.pop()    # remove the last index
+print(basket)
+
+basket.pop(0)   # remove by index
+
+basket.remove(4) # remove by value
+
+new_list = basket.pop(4)
+print(new_list) # returns the element which is removed
+
+basket.clear()	# empties the list
+print(basket)
+
+
+### more list methods
+
+basket = ['a','b','c','d','e']
+print(basket.index('d',0,2)) # error not in the list
+print(basket.index('d',0,4)) # returns the index
+
+#to avoid errors while getting errors
+
+print('d' in basket)
+print('i' in 'index')
+
+print(basket.count('d'))
+
+basket.sort()	       # modifies the source
+print(basket)
+
+print(sorted(basket))  #doesn't modify the source instead creates a new list
+print(basket) 
+
+# also, use bucket.copy() to copy the list instead of slicing
+
+basket.reverse()
+print(basket)
+
+
+print(basket[::-1])  #it creates a new slicing and doesn't impact the source
+
+print(list(range(101)))
+print(list(range(1,100)))
+
+sentence = '!'
+sentence.join(['hi', 'my', 'name', 'is', 'JOJO'])
+
+print(sentence) # returns '!' as it created a new sentence
+
+
+###
+#sentence = '!'
+#sentence = ''
+sentence = ' '
+#new_sentence = sentence.join(['hi', 'my', 'name', 'is', 'JOJO'])
+#new_sentence = sentence.join(['hi', 'my', 'name', 'is', 'JOJO'])
+new_sentence = ' '.join(['hi', 'my', 'name', 'is', 'JOJO']) # easy option
+print(new_sentence)
+
+# list unpacking
+basket = [1,2,3]
+
+#a,b,c = [1,2,3]
+#a,b,c, *other = [1,2,3,4,5,6,7,8,9]
+a,b,c, *other, d = [1,2,3,4,5,6,7,8,9]
+print(a)
+print(b)
+print(c)
+print(other)
+print(d)
+
+
+### None   # equal to Null in other language
+weapons = None
+print(weapons)
+
+## Dictionaries
+dictionary = {
+'a': 1,
+'b': 2
+}
+
+#print(dictionary['b'])
+print(dictionary['c'])  #KeyError
+
+# List is ordered and Dict is unordered key value pair
+print(dictionary) # small dict may return in the order of assignment but larger dict might not be in order
+
+dictionary = {
+'a': [1,2,3],
+'b': 'hello',
+'x': True
+}
+
+print(dictionary['a'][1])
+
+my_list = [
+{
+'a': [1,2,3],
+'b': 'hello',
+'x': True
+},
+{
+'a': [4,5,6],
+'b': 'hello',
+'x': True
+}
+]
+
+print(my_list[0]['a'])	
+print(my_list[0]['a'][2])
+
+
+Dictionary Keys
+---------------
+99% usually the keys will be a descriptive string
+a key has to be unique if it repeats the old one will get overwritten
+
+a key must be immutable.
+
+a list cannot be a key
+
+
+Dictionary Methods
+------------------
+You will get key error if you try to access a key which is not in the dictionary
+print(user['age'])
+
+Handling errors will be covered later
+
+but a good method to get the key is
+print(user.get('age'))
+
+print(user.get('age', 55))  #returns default 55 if the key doesn't exists
+
+
+user2 = dict(name='john')  # it is not a common way
+print(user2)
+
+
+print('basket' in user)
+print('age' in user.values())
+print('hello' in user.keys())
+
+print(user.items())   # returns in tuple format and will see later when we cover tuples topic
+
+
+user.clear()
+print(user)
+
+user2 = user.copy()
+print(user2)
+
+
+print(user.pop('age'))  # returns the values which is removed
+
+print(user.popitem())   # removes any random items as dict contains unordered pairs
+
+
+print(user.update({'age': 55}))   # if it exists it will update
+print(user.update({'ages': 55}))	  # add new if it doesn't exit
+
+
+Tuples
+------
+same like lists but it is immutable
+
+my_tuple = (1,2,3,4,5)
+my_tuple[1] = 'z'
+
+print(my_tuple[1])
+
+print(5 in my_tuple)
+
+no reverse and no sort in tuple but faster than lists (performance)
+
+slicing is possible
+my_tuple = (1,2,3,4,5)
+new_tuple = my_tuple[1:2]
+
+print(new_tuple)
+
+x,y,z, *other = (1,2,3,4,5)
+print(x)
+print(other)
+
+Tuple Methods
+-------------
+my_tuple.index()
+my_tuple.count()
+len(my_tuple)
+
+Sets  (unordered)
+----
+my_set = {1,2,3,4,5,5}
+print(my_set} # returns only unique items
+
+my_set.add(100)
+my_set.add(2)
+
+my_list = [1,2,3,4,5,5]
+print(set(my_list))  # convert list to a unique collection (remove duplicates)
+
+print(my_set[0])  # cannot retrieve based on index
+
+print(1 in my_set)
+print(len(my_set))
+
+print(list(my_set)) # it can also be converted to a list
+
+myset.copy()
+myset.clear()
+
+More Set Methods
+----------------
+my_set = {1,2,3,4,5}
+your_set = {4,5,6,7,8,9,10}
+
+Ex: venn diagram
+
+print(my_set.difference(your_set))  # {1,2,3,4,5} and will not modify the source
+print(my_set.discard(5))  # None
+print(my_set)  # {1,2,3,4}
+print(my_set.difference_update(your_set)) # None but modifies the source
+print(my_set)  # {1,2,3}
+print(my_set.intersection(your_set))  # {4,5}  --> print(my_set & your_set)
+print(my_set.isdisjoint(your_set))  # false  means nothing in common.
+print(my_set.union(your_set)) # shortcut --> print(my_set | your_set)
+my_set = {4,5}
+print(my_set.issubset(your_set))  # True
+print(my_set.issuperset(your_set)) # False
+print(your_set.issuperset(my_set)) # True
+
+
+More Basics
+------------
+Conditional Logic
+-----------------
+is_old = True
+is_licenced = True
+
+if is_old and is_licenced:
+  print('you are old enough to drive!')
+elif is_licenced:
+  print('you can drive now!')
+else:
+  print('you are not of age!')
+
+print('okok')
+
+Indentation in Python
+---------------------
+
+Truthy vs Falsey
+----------------
+print(bool(''))
+print(bool(0))
+
+print(bool('hello'))
+print(bool(5))
+
+check truthy vs falsey in stackoverflow
+
+password = '123'
+username = 'johnny'
+
+if username and password:
+  print('ok')
+
+Ternary Operator or Conditional Expressions (its a shortcut for if-else)
+--------------------------------------------
+its a new version since python 2.4
+
+# condition_if_true if condition else condition_if_else
+
+is_friend = True
+can_message = "message allowed" if is_friend else "not allowed to message"
+print(can_message)
+
+
+Short Circuiting (Truth Table)
+----------------
+is_Friend = True
+is_User = True
+
+if is_Friend and is_User:  # if first value itself is false it wont look for next value
+  print("best friends")
+
+if is_Friend or is_User:  # if first value itself is true it wont look for next value
+  print("best friends")
+
+Logical Operators
+-----------------
+>
+<
+==
+>=
+<=
+!=
+not
+print(4 > 5)
+print(4 < 5)
+print(4 == 5)
+print('hello' == 'hello')
+
+
+is and  ==
+----------
+print(True == 1)		# True
+print('' == 1)			# False
+print([] == 1)			# False
+print(10 == 10.0)		# True
+print([] == [])			# True
+
+print(True is 1)		# False
+print('' is 1)			# False
+print([] is 1)			# False
+print(10 is 10.0)		# False
+print([] is [])			# False
+
+== checks the value but "is" checks memory
+
+print(True is True)		# True
+print('1' is 1)			# True
+print(10 is 10)			# True
+
+
+For loops
+---------
+for item in "MyString":
+  print(item)
+
+for item in [1,2,3,4,5]:
+  print(item)
+
+for item in {1,2,3,4,5}:
+  print(item)
+
+for item in (1,2,3,4,5):
+  print(item)
+
+it works for anything which has collection of items
+
+for item in (1,2,3,4,5):
+  print(item)
+  print(item)
+  print(item)
+print(item)
+print('hi'!)
+
+for item in (1,2,3,4,5):
+  for x in ['a', 'b', 'c']:
+    print(item, x)
+
+Iterables
+---------
+iterables can be list, dictionaries, tuple, set, string
+iterables means it can be iterated --> it means one by one check each item in the collection
+
+user = {
+  'name': 'Golem',
+  'age': 50,
+  'can_swim': False
+}
+
+for item in user:
+  print(item) # it prints the keys
+
+for item in user.items():
+  print(item)
+
+for item in user.values():
+  print(item)
+
+for item in user.keys():
+  print(item)
+
+for item in user.items():
+  key, value = item;
+  print(key, value)
+
+for key, value in user.items():
+  print(key, value)
+
+for k, v in user.items():
+  print(k, v)
+
+
+for item in 50:
+  print(item)   # int object is not iterable
+
+
+Ex: Tricy Counter
+-----------------
+my_list = [1,2,3,4,5,6,7,8,9,10]
+
+counter = 0
+
+for item in my_list:
+  counter = counter + item
+print(counter)
+
+
+Range
+-----
+for number in range(0, 100):
+  print(number)
+
+for _ in range(0, 10):
+  print("Sending Email")
+
+for _ in range(0, 10):
+  print(_)
+
+for i in range(0, 10, -1):  # wont work as the start number must be greater than ending for reverse order
+
+for i in range(10, 0, -1): # prints in reverse order
+
+for i in range(10, 0): # wont work with -1 in step
+
+range used mostly in for loops and sometimes in list too
+
+print(list(range(10))
+
+
+Enumerate
+---------
+for i,char in enumerate('Hellloooo'):
+  print(i, char)
+
+for i,char in enumerate([1,2,3]):
+  print(i, char)
+
+for i,char in enumerate((1,2,3)):
+  print(i, char)
+
+Exercise:
+for i,char in enumerate(list(range(100))):
+  if char == 50:
+    print(f'index of 50 is: {i}')
+
+
+While Loops
+-----------
