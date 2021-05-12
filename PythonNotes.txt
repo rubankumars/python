@@ -936,3 +936,25 @@ for image in picture:
     else:
       print(' ', end ="")
   print('') 
+
+# Developer Fundamentals
+------------------------
+clean
+readability
+predictability
+DRY (DO NOT REPEAT YOURSELF/STEPS)
+
+Ex: Check for duplicates in list:
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+duplicates = []
+for value is some_list:
+  if some_list.count(value) > 1:
+    if value not in duplicates:
+      duplicates.append(value)
+print(duplicates)
+
+# Functions
+-----------
+def say_hello():
+  print('hellloooooo')
