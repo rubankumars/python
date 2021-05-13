@@ -958,3 +958,66 @@ print(duplicates)
 -----------
 def say_hello():
   print('hellloooooo')
+ 
+ 
+Parameters and Arguments (positional arguments)
+------------------------
+def say_hello(name, emoji):
+  print(f'hellloooooo {name} {emoji}')
+ 
+say_hello('John', ':p')
+
+Default Parameters and Keyword Arguments
+----------------------------------------
+#Default params
+def say_hello(name='Darth Vader', emoji=':@'):
+  print(f'hellloooooo {name} {emoji}')
+
+# Keyword Arguments
+say_hello(emoji=':p', name='John')
+
+Return Statement
+----------------
+def sum(num1, num2):
+  num1 + num2
+  
+print(sum(4,5))
+####
+def sum(num1, num2):
+  return num1 + num2
+total = sum(4,5)  
+print(sum(4,total))
+print(sum(4, sum(4,5))
+###
+def sum(num1, num2):
+  def another_func(num1, num2):
+    return num1 + num2
+  return another_func(num1, num2)
+  
+total = sum(4,5)  
+print(total)
+###
+def sum(num1, num2):
+  def another_func(num1, num2):
+    return num1 + num2
+  return another_func(num1, num2)
+  return 5                # never get executed as it is after return
+  print('hello')          # never get executed as it is after return
+total = sum(4,5)  
+print(total)
+
+Methods vs Functions
+--------------------
+list()
+print()
+max()
+min()
+input()
+
+def some_random_stuff()
+  pass
+
+some_random_stuff()
+
+# method
+'helloo'.capitalize
