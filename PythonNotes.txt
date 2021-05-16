@@ -1021,3 +1021,85 @@ some_random_stuff()
 
 # method
 'helloo'.capitalize
+
+DocString
+---------
+def test(a):
+  '''
+  Info: this function tests and prints param a
+  '''
+  print(a)
+
+test('!!!!')
+
+When invoking the function, the editor will show the docstring in the suggestion 
+also use help option to print the docstring
+help(test)
+print(test.__doc__)
+
+### Clean Code
+def is_even(num):
+  if num % 2 == 0:
+    return True
+  elif num % 2 != 0:
+    return False
+
+print(is_even(51))
+
+
+## Cleaner code
+
+def is_even(num):
+  if num % 2 == 0:
+    return True
+  else:
+    return False
+
+print(is_even(51))
+
+## More Cleaner
+
+def is_even(num):
+  if num % 2 == 0:
+    return True
+  return False
+
+print(is_even(51))
+
+## Cleanest
+def is_even(num):
+  return num % 2 == 0
+
+print(is_even(51))
+
+args vs kwargs
+--------------
+# *args
+# **kwargs
+
+def super_func(args):
+  return sum(args)
+  
+super_func(1,2,3,4,5)  # returns error
+
+
+def super_func(*args):
+  print(*args) # for debugging purpose
+  print(args)  # returns as tuple
+  return sum(args)
+  
+print(super_func(1,2,3,4,5))
+
+
+####  **kwargs
+
+def super_func(*args, **kwargs):
+  print(kwargs) # returns as dict, for debugging purpose
+  toatl = 0
+  for items in kwargs.values():
+    total += items
+  return sum(args) + total
+  
+print(super_func(1,2,3,4,5, num1=5, num2=10))
+
+#Rule: params, *args, default parameters, **kwargs
