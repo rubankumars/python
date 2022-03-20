@@ -1411,3 +1411,70 @@ print(list(filter(is_smart_student, scores)))
 #4 Combine all of the numbers that are in a list on this file using reduce (my_numbers and scores). What is the total?
 def accumulator(acc, item):    
     return acc + item
+    
+### Lambda Function
+
+my_list = [1,2,3]
+print(list(map(lambda item: item*2, my_list)))
+
+print(list(filter(lambda item: item%2 != 0, my_list)))
+
+print(reduce(lambda acc, item: acc+item, my_list)))
+
+### Lambda Function - Exercise
+
+print(list(map(lambda num: num**2, [1,2,3])))
+
+a = [(0, 2), (5, 2), (9, 9), (10, -1)]
+a.sort(key=lambda x: x[1])
+
+print(a)
+
+### List Comprehensions
+
+my_list = []
+for char in 'hello':
+    my_list.append(char)
+print(my_list)
+
+Same example using list comprehension.
+-------------------------------------
+my_list = [char for char in 'hello']
+my_list2 = [num for num in range(0,100)]
+my_list3 = [num*2 for num in range(0,100)]
+my_list4 = [num*2 for num in range(0,100) if num % 2 == 0]
+
+### Set Comprehension
+my_set = {char for char in 'hello'}
+my_set2 = {num for num in range(0,100)}
+my_set3 = {num*2 for num in range(0,100)}
+my_set4 = {num*2 for num in range(0,100) if num % 2 == 0}
+
+### Dict Comprehension
+simple_dict = {
+    'a':1,
+    'b':2
+}
+my_dict = {key:value**2 for key,value in simple_dict.items()}
+print(my_dict)
+                     (or)
+my_dict = {k:v**2 for k,v in simple_dict.items() if v%2==0}
+print(my_dict)
+                     (or)
+my_dict = {num:num*2 for num in [1,2,3]}
+
+### List Comprehensions - Exercise
+Ex: Check for duplicates in list:
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+### Regular Solution
+duplicates = []
+for value is some_list:
+  if some_list.count(value) > 1:
+    if value not in duplicates:
+      duplicates.append(value)
+print(duplicates)
+
+#### SOLUTION IN LIST COMPREHENSION WAY
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+duplicates = list(set([x for x in some_list if some_list.count(x) > 1]))
+print(duplicates)
